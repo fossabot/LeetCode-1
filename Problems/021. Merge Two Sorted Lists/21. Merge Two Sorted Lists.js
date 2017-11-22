@@ -1,30 +1,6 @@
 /* eslint no-console: off, prefer-destructuring: off */
 
-// Test code
-function ListNode(val) {
-  this.val = val;
-  this.next = null;
-}
-
-ListNode.prototype.print = function print() {
-  let self = this;
-  const array = [];
-  while (self !== null) {
-    array.push(self.val);
-    self = self.next;
-  }
-  console.log(array.toString());
-};
-
-const a1 = new ListNode(1);
-a1.next = new ListNode(8);
-a1.next.next = new ListNode(10);
-
-const a2 = new ListNode(2);
-a2.next = new ListNode(7);
-a2.next.next = new ListNode(9);
-a2.next.next.next = new ListNode(11);
-a2.next.next.next.next = new ListNode(13);
+import ListNode from '../Library/ListNode';
 
 /**
 * Definition for singly-linked list.
@@ -144,6 +120,17 @@ const mergeTwoLists2 = function mergeTwoLists(list1, list2) {
     return list2;
   }
 };
+
+// Test code
+const a1 = new ListNode(1);
+a1.next = new ListNode(8);
+a1.next.next = new ListNode(10);
+
+const a2 = new ListNode(2);
+a2.next = new ListNode(7);
+a2.next.next = new ListNode(9);
+a2.next.next.next = new ListNode(11);
+a2.next.next.next.next = new ListNode(13);
 
 mergeTwoLists1(a1, a2).print();
 mergeTwoLists11(a1, a2).print();
