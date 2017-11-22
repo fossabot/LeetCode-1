@@ -1,5 +1,6 @@
 /* eslint-env node */
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const output = {
@@ -7,8 +8,19 @@ const output = {
   name: '[name].built.js',
 };
 
-const appName = '19. Remove Nth Node From End of List';
-const jsFile = path.join(__dirname, `Problems/0${appName}/${appName}.js`);
+const dirStrings = fs.readdirSync(path.join(__dirname, 'Problems'));
+const dirArray = Array(731);
+// eslint-disable-next-line no-restricted-syntax
+dirStrings.forEach((dirName) => {
+  const dirNum = parseInt(dirName, 10);
+  if (!Number.isNaN(dirNum)) {
+    dirArray[dirNum] = dirName;
+  }
+});
+
+const itemNumber = 10;
+const appName = dirArray[itemNumber];
+const jsFile = path.join(__dirname, `Problems/${appName}/main.js`);
 
 module.exports = {
   entry: {

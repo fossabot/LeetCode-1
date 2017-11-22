@@ -1,10 +1,11 @@
+/* eslint-disable no-console */
+
 /**
  * @description [description]
  * @param {string} s
  * @return {number}
  */
-var romanToInt = function(s) {
-  'use strict';
+const romanToInt = function romanToInt(s) {
   let result = 0;
   let str = s;
 
@@ -74,6 +75,5 @@ var romanToInt = function(s) {
   }
   return result;
 };
-
 
 console.log(romanToInt('VI'));

@@ -1,13 +1,15 @@
+/* eslint-disable no-console */
+
 /**
  * @version 0.1
- * @description
- * @description
+ * @description 1047/1047
+ * @description 122ms 97.40%
  * @param {string} str
  * @return {number}
  */
-var myAtoi = function(str) {
+const myAtoi = function myAtoi(str) {
   let result = Number.parseInt(str, 10);
-  if (isNaN(result)) {
+  if (Number.isNaN(result)) {
     result = 0;
   }
   if (result > 2147483647) {
