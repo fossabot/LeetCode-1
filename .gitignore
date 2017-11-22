@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# npm
+node_modules
+
+# 临时文件
+*~
+
+# IDEA
+.idea
