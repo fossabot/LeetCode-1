@@ -1,17 +1,9 @@
 /* eslint no-console: off, prefer-destructuring: off */
 
 import ListNode from '../Library/ListNode';
-
-/**
-* Definition for singly-linked list.
-* function ListNode(val) {
-*     this.val = val;
-*     this.next = null;
-* }
-*/
 /**
  * @version 1.0.0
- * @description
+ * @description while 循环, 比较大小, 依次加入新链表
  * @description 132ms 58.14%
  * @param {ListNode} l1
  * @param {ListNode} l2
@@ -49,7 +41,7 @@ const mergeTwoLists1 = function mergeTwoLists(list1, list2) {
 
 /**
  * @version 1.0.1
- * @description
+ * @description 调换 while 循环内的 if-else 条件位置
  * @description 132ms 58.14%
  * @param {ListNode} l1
  * @param {ListNode} l2
@@ -94,7 +86,7 @@ const mergeTwoLists11 = function mergeTwoLists(list1, list2) {
 */
 /**
  * @version 2.0.0
- * @description
+ * @description 递归实现
  * @description 115ms 70.61%
  * @param {ListNode} l1
  * @param {ListNode} l2
