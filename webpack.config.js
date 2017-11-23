@@ -37,13 +37,7 @@ module.exports = {
     }),
   ],
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
-    ],
+    loaders: [{}],
   },
   devServer: {
     host: '0.0.0.0',

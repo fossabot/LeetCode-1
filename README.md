@@ -12,3 +12,9 @@
 
 1. 保持代码风格统一
 2. 保持注释样式统一
+
+## Problems:
+
+1. `eslint-loader` 加入后, webpack 构建时间明显变长, 暂时取消引入该 loader.
+
+[Webpack 性能优化](http://www.ituring.com.cn/article/200534)
