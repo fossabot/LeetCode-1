@@ -103,12 +103,12 @@ const mergeTwoLists2 = function mergeTwoLists(list1, list2) {
 
   if (list1.val < list2.val) {
     // eslint-disable-next-line no-param-reassign
-    list1.next = mergeTwoLists(list1.next, list2);
+    list1.next = mergeTwoLists2(list1.next, list2);
     return list1;
     // eslint-disable-next-line no-else-return
   } else {
     // eslint-disable-next-line no-param-reassign
-    list2.next = mergeTwoLists(list2.next, list1);
+    list2.next = mergeTwoLists2(list2.next, list1);
     return list2;
   }
 };
