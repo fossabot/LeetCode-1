@@ -47,7 +47,7 @@ const mergeTwoLists1 = function mergeTwoLists(list1, list2) {
  * @param {ListNode} l2
  * @return {ListNode}
  */
-const mergeTwoLists11 = function mergeTwoLists(list1, list2) {
+const mergeTwoLists101 = function mergeTwoLists(list1, list2) {
   if (list1 === null) {
     return list2;
   }
@@ -86,7 +86,7 @@ const mergeTwoLists11 = function mergeTwoLists(list1, list2) {
 */
 /**
  * @version 2.0.0
- * @description 递归实现
+ * @description 递归实现, 有缺陷: 会改变两个链表
  * @description 115ms 70.61%
  * @param {ListNode} l1
  * @param {ListNode} l2
@@ -125,5 +125,5 @@ a2.next.next.next = new ListNode(11);
 a2.next.next.next.next = new ListNode(13);
 
 mergeTwoLists1(a1, a2).print();
-mergeTwoLists11(a1, a2).print();
+mergeTwoLists101(a1, a2).print();
 mergeTwoLists2(a1, a2).print();

@@ -1,11 +1,11 @@
-let nums1 = [20];
-let nums2 = [0];
+const nums1 = [20];
+const nums2 = [0];
 
 function concatSortedArray(nums1, nums2) {
   const array = [];
   let index1 = 0;
   let index2 = 0;
-  let sum = nums1.length + nums2.length;
+  const sum = nums1.length + nums2.length;
 
   if (nums1.length === sum || nums2.length === sum) {
     return nums1.length > nums2.length ? nums1 : nums2;
@@ -23,17 +23,16 @@ function concatSortedArray(nums1, nums2) {
   return array;
 }
 
-var findMedianSortedArrays = function(nums1, nums2) {
-  let newNums = concatSortedArray(nums1, nums2);
+const findMedianSortedArrays = function (nums1, nums2) {
+  const newNums = concatSortedArray(nums1, nums2);
 
   if (newNums.length % 2 !== 0) {
-    let index = Math.floor(newNums.length / 2);
+    const index = Math.floor(newNums.length / 2);
     return newNums[index];
-  } else {
-    let indexR = newNums.length / 2;
-    let indexL = indexR - 1;
-    return (newNums[indexL] + newNums[indexR]) / 2;
   }
+  const indexR = newNums.length / 2;
+  const indexL = indexR - 1;
+  return (newNums[indexL] + newNums[indexR]) / 2;
 };
 
 console.log(findMedianSortedArrays(nums1, nums2));

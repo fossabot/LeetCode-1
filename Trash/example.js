@@ -1,4 +1,4 @@
-'use strict';
+
 
 /**
  * [getIntRandom description]
@@ -18,8 +18,6 @@ function getIntRandom(max, min) {
  * @return {[type]}        [description]
  */
 function generateNums(length, max, min) {
-
-
   const nums = [];
   for (let i = 0; i < length; i++) {
     nums.push(getIntRandom(max, min));
@@ -30,7 +28,7 @@ function generateNums(length, max, min) {
 const nums = generateNums(100000, 0, 10000000000);
 // console.log(nums);
 
-Array.prototype.swap = function(i, j) {
+Array.prototype.swap = function (i, j) {
   [this[j], this[i]] = [this[i], this[j]];
 };
 
@@ -40,7 +38,7 @@ Array.prototype.swap = function(i, j) {
  * @return {number[]} result
  */
 function quickSort(nums) {
-  const partition = function(left, right) {
+  const partition = function (left, right) {
     const pivotValue = nums[right];
     let store = left;
     for (let i = left; i < right; i++) {
@@ -54,9 +52,9 @@ function quickSort(nums) {
     return store;
   };
 
-  const sort = function(left, right) {
+  const sort = function (left, right) {
     if (left < right) {
-      let newPivot = partition(left, right);
+      const newPivot = partition(left, right);
       sort(left, newPivot - 1);
       sort(newPivot + 1, right);
     }

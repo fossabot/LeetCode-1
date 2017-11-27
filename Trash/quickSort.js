@@ -1,13 +1,13 @@
-'use strict';
+
 
 function quickSort(array) {
-  let swap = function(array, a, b) {
+  const swap = function (array, a, b) {
     [array[a], array[b]] = [array[b], array[a]];
   };
 
-  let partition = function(array, left, right) {
+  const partition = function (array, left, right) {
     // 基准元素移至末尾（选取最后一个元素为基准）
-    let pivot = array[right];
+    const pivot = array[right];
     // 定义起始交换位置
     let storeIndex = left;
     // 遍历数组
@@ -20,11 +20,11 @@ function quickSort(array) {
     return storeIndex - 1;
   };
 
-  let sort = function(array, left, right) {
+  const sort = function (array, left, right) {
     if (left > right) {
       return;
     }
-    let storeIndex = partition(array, left, right);
+    const storeIndex = partition(array, left, right);
     sort(array, left, storeIndex - 1);
     sort(array, storeIndex + 1, right);
   };
