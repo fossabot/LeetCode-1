@@ -18,7 +18,7 @@ dirStrings.forEach((dirName) => {
   }
 });
 
-const itemNumber = 26;
+const itemNumber = 5;
 const appName = dirArray[itemNumber];
 const jsFile = path.join(__dirname, `Problems/${appName}/main.js`);
 
@@ -40,7 +40,7 @@ module.exports = {
     loaders: [{}],
   },
   devServer: {
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 10080,
     overlay: {
       warnings: true,
