@@ -33,41 +33,39 @@ const threeSum1 = function threeSum(nums) {
 
 /**
  * @version 2.0.0
- * @description
+ * @description 279ms 84.14%
  * @description
  * @param {number[]} nums
  * @return {number[][]}
  */
 const threeSum2 = function threeSum(nums) {
-  const results = [];
-  const resultsStr = [];
   const length = nums.length;
+  const results = [];
   if (length < 3) {
     return results;
   }
 
   const sortFunc = (a, b) => a - b;
-
   nums.sort(sortFunc);
-  let left = 0;
-  let right = length - 1;
-
-  while (left !== (length - 1) && right !== 0) {
-    // nums[left]
-    // nums[right]
-    const thirdValue = 0 - (nums[left] + nums[right]);
-    const thirdIndex = nums.indexOf(thirdValue);
-    if (thirdIndex !== left && thirdIndex !== right && thirdIndex !== -1) {
-      // 找到了
-      const res = [nums[left], nums[right], nums[thirdIndex]].sort(sortFunc);
-      const resStr = res.toString();
-      if (!resultsStr.includes(resStr)) {
-        results.push(res);
-        resultsStr.push(resStr);
+  let target;
+  let l;
+  let r;
+  let temp;
+  for (let i = 0; i < length - 2; i += 1) {
+    if (i === 0 || nums[i] !== nums[i - 1]) {
+      target = 0 - nums[i];
+      l = i + 1;
+      r = length - 1;
+      while (l < r) {
+        if (nums[l] + nums[r] === target) {
+          results.push([nums[i], nums[l], nums[r]]);
+          temp = nums[l];
+          while (l < r && nums[l] === temp) l += 1;
+          temp = nums[r];
+          while (l < r && nums[r] === temp) r -= 1;
+        } else if (nums[l] + nums[r] < target) l += 1;
+        else r -= 1;
       }
-      right -= 1;
-    } else {
-      left += 1;
     }
   }
   return results;

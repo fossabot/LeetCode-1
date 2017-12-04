@@ -18,7 +18,7 @@ dirStrings.forEach((dirName) => {
   }
 });
 
-const itemNumber = 5;
+const itemNumber = 15;
 const appName = dirArray[itemNumber];
 const jsFile = path.join(__dirname, `Problems/${appName}/main.js`);
 
