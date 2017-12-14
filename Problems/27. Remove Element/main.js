@@ -48,4 +48,5 @@ const removeElement2 = function removeElement(nums, val) {
   return nums.length;
 };
 
+removeElement1([2, 3, 4], 6);
 removeElement2([2], 3);
