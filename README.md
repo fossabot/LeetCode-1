@@ -1,4 +1,6 @@
 # LeetCode
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FKravisII%2FLeetCode.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FKravisII%2FLeetCode?ref=badge_shield)
+
 
 ## How to Debug
 
@@ -17,3 +19,6 @@
 ## TODO:
 
 1. 保持代码风格和注释样式统一
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FKravisII%2FLeetCode.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FKravisII%2FLeetCode?ref=badge_large)
